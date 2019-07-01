@@ -1,0 +1,12 @@
+<!-- <div>
+    <audio controls>
+        <source [src]="horse.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+</div> -->
+
+<div class="mt-5 ">
+    <input (input)="onInputChange($event)" class="input" value={{value}}
+        placeholder="Tap on the virtual keyboard to start" />
+    <div class="simple-keyboard"></div>
+</div>
