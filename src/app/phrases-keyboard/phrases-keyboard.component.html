@@ -2,11 +2,15 @@
     <div class="row row-no-gutters">
         <div class="img-container m-1 ">
             <div class="container">
-                <textarea readonly class="col" matInput [value]="numberArray.join('')"></textarea>
+                <textarea [(ngModel)]="phrases" readonly class="col" matInput [value]="numberArray.join('')"></textarea>
 
                 <div class="images-container">
                     <div class="key shift left ">
                         <button (click)="addPhrase(' ')">SPACEBAR</button>
+                    </div>
+
+                    <div class="key shift left ">
+                        <button (click)="clearSearch()"><i class="fas fa-backspace"></i></button>
                     </div>
 
                     <div class="key shift left">

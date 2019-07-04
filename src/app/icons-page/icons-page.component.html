@@ -6,14 +6,14 @@
     <div class="images-container">
         <div *ngFor="let animal of animal" class="img-container m-1 ">
             <a class="btn" (click)="toggle(animal)"><img class="item-img w-100 h-100" src={{animal.src}} /></a>
-            <h4 [hidden]="animal.hide">{{animal.name}}</h4>
-            <!-- <audio [hidden]="animal.hide" controls>
+            <h4 [hidden]="animal.hide"  >{{animal.name}}</h4>
+            <audio [hidden]="animal.hide" controls>
                 <source src={{animal.audioSrc}} type="audio/mpeg">
                 Your browser does not support the audio element.
-            </audio> -->
-            <input [hidden]="animal.hide" onclick='responsiveVoice.speak("Cat");' type='button' value='🔊 Play' />
+            </audio>
         </div>
     </div>
+    
     <div class="center text-secondary">
         Icons made by
         <a class="text-secondary"

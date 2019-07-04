@@ -7,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PhrasesKeyboardComponent implements OnInit {
   phraseskey: any;
+
   numberArray: Array<string> = [];
 
+  phrases = '';
   constructor() { }
 
   ngOnInit() {
@@ -21,4 +23,11 @@ export class PhrasesKeyboardComponent implements OnInit {
   addPhrase(button) {
     this.numberArray.push(button);
   }
+
+
+  clearSearch() {
+    this.numberArray.pop();
+    this.phrases = null;
+  }
+
 }
