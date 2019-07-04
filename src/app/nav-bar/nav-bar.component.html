@@ -1,0 +1,47 @@
+<nav class="shadow p-3 mb-5 bg-white navbar navbar-expand-lg navbar-light bg-info fixed-top">
+    <img [src]="parrot" alt="logo parrot" />
+    <a class="navbar-brand logoFont">Rasp</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" routerLink="/mainlandingpage">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/phrasespage">Phrases</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/iconspage">Icons</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/keyboardpage">Keyboard</a>
+            </li>
+        </ul>
+
+        <i class="far fa-user-circle iconColor fa-lg"></i>
+    </div>
+    <div class="bottom-bar fixed-bottom p-2 d-sm-none d-grid shadow ">
+        <div>
+            <a routerLink="/" class="nav-link-style" [class.active-nav-link-bottom]="isAtHomePage">
+
+                <i class="fas fa-home iconColor fa-lg"></i>
+            </a>
+        </div>
+
+        <div>
+            <a routerLink="/" class="nav-link-style" [class.active-nav-link-bottom]="isAtProfilePage">
+                <i class="far fa-user-circle iconColor fa-lg"></i>
+            </a>
+        </div>
+
+        <div>
+            <a routerLink="/" class="nav-link-style" [class.active-nav-link-bottom]="isAtProfilePage">
+                <i class="fas fa-search iconColor fa-lg"></i>
+            </a>
+        </div>
+    </div>
+</nav>

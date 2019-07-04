@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Expletus+Sans&display=swap');
+
+$primary-text-color: rgba(0, 0, 0, 0.747);
+
+.logoFont {
+    font-family: 'Expletus Sans', cursive;
+}
+
+.iconColor {
+    color: grey;
+}
+
+.bottom-bar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+}
+
+.nav-link-style {
+    color: $primary-text-color;
+    text-decoration: none;
+}
+
+.nav-link-bottom {
+    color: $primary-text-color;
+}
+
+.active-nav-link {
+    border-top: 3px solid #00000000;
+    border-bottom: 3px solid $primary-text-color;
+}
+
+.active-nav-link-bottom {
+    color: #007bff;
+}

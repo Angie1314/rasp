@@ -8,14 +8,9 @@ import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
 })
 export class MainLandingPageComponent implements OnInit {
 
-  parrot;
-
-  faUserCircle = faUserCircle;
-
-
 
   constructor() {
-    this.parrot = '../../../../assets/images/parrot.png';
+
   }
 
   ngOnInit() {
