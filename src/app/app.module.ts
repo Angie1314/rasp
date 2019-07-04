@@ -17,6 +17,8 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { KeyboardPageComponent } from './keyboard-page/keyboard-page.component';
 import { PhrasesKeyboardComponent } from './phrases-keyboard/phrases-keyboard.component';
 
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +36,8 @@ import { PhrasesKeyboardComponent } from './phrases-keyboard/phrases-keyboard.co
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -5,8 +5,9 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './phrases-keyboard.component.html',
   styleUrls: ['./phrases-keyboard.component.scss']
 })
-export class PhrasesKeyboardComponent implements OnInit  {
+export class PhrasesKeyboardComponent implements OnInit {
   phraseskey: any;
+  numberArray: Array<string> = [];
 
   constructor() { }
 
@@ -15,5 +16,9 @@ export class PhrasesKeyboardComponent implements OnInit  {
 
   onInputChange = (event: any) => {
     this.phraseskey.setInput(event.target.value);
+  }
+
+  addPhrase(button) {
+    this.numberArray.push(button);
   }
 }

@@ -1,190 +1,255 @@
 <div class="keyboard mt-5">
+    <div class="row row-no-gutters">
+        <div class="img-container m-1 ">
+            <div class="container">
+                <textarea readonly class="col" matInput [value]="numberArray.join('')"></textarea>
 
-    <div class="section-a">
+                <div class="images-container">
+                    <div class="key shift left ">
+                        <button (click)="addPhrase(' ')">SPACEBAR</button>
+                    </div>
 
-        <div class="key shift left">
-            a
-        </div>
-        <div class="key shift left">
-            at
-        </div>
-        <div class="key shift left">
-            can
-        </div>
+                    <div class="key shift left">
+                        <button (click)="addPhrase('a')">a</button>
+                    </div>
 
-        <div class="key shift left">
-            have
-        </div>
-        <div class="key shift left">
-            I
-        </div>
-        <div class="key shift left">
-            like
-        </div>
-        <div class="key shift left">
-            of
-        </div>
-        <div class="key shift left">
-            please
-        </div>
+                    <div class="key shift left">
+                        <button (click)="addPhrase('at')">at</button>
+                    </div>
 
-        <div class="key shift left">
-            that
-        </div>
-        <div class="key shift left">
-            they
-        </div>
-        <div class="key shift left">
-            was
-        </div>
-        <div class="key shift left">
-            we
-        </div>
+                    <div class="key shift left">
+                        <button (click)="addPhrase('can')">can</button>
+                    </div>
 
-        <div class="key shift left">
-            about
-        </div>
-        <div class="key shift left">
-            are
-        </div>
-        <div class="key shift left">
-            do
-        </div>
+                    <div class="key shift left">
+                        <button (click)="addPhrase('have')">have</button>
+                    </div>
 
-        <div class="key shift left">
-            he
-        </div>
-        <div class="key shift left">
-            in
-        </div>
-        <div class="key shift left">
-            me
-        </div>
-        <div class="key shift left">
-            off
-        </div>
-        <div class="key shift left">
-            said
-        </div>
+                    <div class="key shift left">
+                        <button (click)="addPhrase('I')">I</button>
+                    </div>
 
-        <div class="key shift left">
-            the
-        </div>
-        <div class="key shift left">
-            this
-        </div>
-        <div class="key shift left">
-            want
-        </div>
-        <div class="key shift left">
-            were
-        </div>
-        <div class="key shift left">
-            all
-        </div>
-        <div class="key shift left">
-            be
-        </div>
-        <div class="key shift left">
-            every
-        </div>
-        <div class="key shift left">
-            had
-        </div>
-        <div class="key shift left">
-            is
-        </div>
-        <div class="key shift left">
-            my
-        </div>
-        <div class="key shift left">
-            on
-        </div>
-        <div class="key shift left">
-            she
-        </div>
-        <div class="key shift left">
-            their
-        </div>
-        <div class="key shift left">
-            to
-        </div>
-        <div class="key shift left">
-            will
-        </div>
-        <div class="key shift left">
-            you
-        </div>
-        <div class="key shift left">
-            an
-        </div>
-        <div class="key shift left">
-            but
-        </div>
-        <div class="key shift left">
-            for
-        </div>
-        <div class="key shift left">
-            help
-        </div>
-        <div class="key shift left">
-            it
-        </div>
-        <div class="key shift left">
-            only
-        </div>
-        <div class="key shift left">
-            some
-        </div>
-        <div class="key shift left">
-            them
-        </div>
-        <div class="key shift left">
-            us
-        </div>
+                    <div class="key shift left">
+                        <button (click)="addPhrase('like')">like</button>
+                    </div>
 
-        <div class="key shift left">
-            with
-        </div>
-        <div class="key shift left">
-            your
-        </div>
-        <div class="key shift left">
-            and
-        </div>
-        <div class="key shift left">
-            by
-        </div>
-        <div class="key shift left">
-            feel
-        </div>
-        <div class="key shift left">
-            his
-        </div>
-        <div class="key shift left">
-            know
-        </div>
-        <div class="key shift left">
-            not
-        </div>
-        <div class="key shift left">
-            or
-        </div>
-        <div class="key shift left">
-            thanks
-        </div>
-        <div class="key shift left">
-            think
-        </div>
-        <div class="key shift left">
-            up
-        </div>
-        <div class="key shift left yes">
-            YES
-        </div>
-        <div class="key shift left no">
-            NO
-        </div>
-    </div><!-- end section-a-->
+                    <div class="key shift left">
+                        <button (click)="addPhrase('of')">of</button>
+                    </div>
 
+                    <div class="key shift left">
+                        <button (click)="addPhrase('please')">please</button>
+                    </div>
+
+                    <div class="key shift left">
+                        <button (click)="addPhrase('that')">that</button>
+                    </div>
+
+                    <div class="key shift left">
+                        <button (click)="addPhrase('they')">they</button>
+                    </div>
+
+                    <div class="key shift left">
+                        <button (click)="addPhrase('was')"> was</button>
+                    </div>
+
+                    <div class="key shift left">
+                        <button (click)="addPhrase('we')"> we</button>
+                    </div>
+
+                    <div class="key shift left">
+                        <button (click)="addPhrase('about')">about</button>
+                    </div>
+
+                    <div class="key shift left">
+                        <button (click)="addPhrase('are')">are</button>
+                    </div>
+
+                    <div class="key shift left">
+                        <button (click)="addPhrase('do')">do</button>
+                    </div>
+
+                    <div class="key shift left">
+                        <button (click)="addPhrase('he')">he</button>
+                    </div>
+
+                    <div class="key shift left">
+                        <button (click)="addPhrase('in')">in</button>
+                    </div>
+
+                    <div class="key shift left">
+                        <button (click)="addPhrase('me')">me</button>
+                    </div>
+
+                    <div class="key shift left">
+                        <button (click)="addPhrase('off')">off</button>
+                    </div>
+
+                    <div class="key shift left">
+                        <button (click)="addPhrase('said')">said</button>
+                    </div>
+
+                    <div class="key shift left">
+                        <button (click)="addPhrase('the')">the</button>
+                    </div>
+
+                    <div class="key shift left">
+                        <button (click)="addPhrase('this')">this</button>
+                    </div>
+
+                    <div class="key shift left">
+                        <button (click)="addPhrase('want')">want</button>
+                    </div>
+
+                    <div class="key shift left">
+                        <button (click)="addPhrase('were')">were</button>
+                    </div>
+
+                    <div class="key shift left">
+                        <button (click)="addPhrase('all')">all</button>
+                    </div>
+
+                    <div class="key shift left">
+                        <button (click)="addPhrase('be')">be</button>
+                    </div>
+
+                    <div class="key shift left">
+                        <button (click)="addPhrase('every')">every</button>
+                    </div>
+
+                    <div class="key shift left">
+                        <button (click)="addPhrase('had')">had</button>
+                    </div>
+
+                    <div class="key shift left">
+                        <button (click)="addPhrase('is')">is</button>
+                    </div>
+
+                    <div class="key shift left">
+                        <button (click)="addPhrase('my')">my</button>
+                    </div>
+
+                    <div class="key shift left">
+                        <button (click)="addPhrase('on')">on</button>
+                    </div>
+
+                    <div class="key shift left">
+                        <button (click)="addPhrase('she')">she</button>
+                    </div>
+
+                    <div class="key shift left">
+                        <button (click)="addPhrase('their')">their</button>
+                    </div>
+
+                    <div class="key shift left">
+                        <button (click)="addPhrase('to')">to</button>
+                    </div>
+
+                    <div class="key shift left">
+                        <button (click)="addPhrase('will')">will</button>
+                    </div>
+
+                    <div class="key shift left">
+                        <button (click)="addPhrase('you')">you</button>
+                    </div>
+
+                    <div class="key shift left">
+                        <button (click)="addPhrase('an')">an</button>
+                    </div>
+
+                    <div class="key shift left">
+                        <button (click)="addPhrase('but')">but</button>
+                    </div>
+
+                    <div class="key shift left">
+                        <button (click)="addPhrase('for')">for</button>
+                    </div>
+
+                    <div class="key shift left">
+                        <button (click)="addPhrase('help')">help</button>
+                    </div>
+
+                    <div class="key shift left">
+                        <button (click)="addPhrase('it')">it</button>
+                    </div>
+
+                    <div class="key shift left">
+                        <button (click)="addPhrase('only')">only</button>
+                    </div>
+
+                    <div class="key shift left">
+                        <button (click)="addPhrase('some')">some</button>
+                    </div>
+
+                    <div class="key shift left">
+                        <button (click)="addPhrase('them')">them</button>
+                    </div>
+
+                    <div class="key shift left">
+                        <button (click)="addPhrase('us')">us</button>
+                    </div>
+
+                    <div class="key shift left">
+                        <button (click)="addPhrase('with')">with</button>
+                    </div>
+
+                    <div class="key shift left">
+                        <button (click)="addPhrase('your')">your</button>
+                    </div>
+
+                    <div class="key shift left">
+                        <button (click)="addPhrase('and')">and</button>
+                    </div>
+
+                    <div class="key shift left">
+                        <button (click)="addPhrase('by')">by</button>
+                    </div>
+
+                    <div class="key shift left">
+                        <button (click)="addPhrase('feel')">feel</button>
+                    </div>
+
+                    <div class="key shift left">
+                        <button (click)="addPhrase('his')">his</button>
+                    </div>
+
+                    <div class="key shift left">
+                        <button (click)="addPhrase('know')">know</button>
+                    </div>
+
+                    <div class="key shift left">
+                        <button (click)="addPhrase('not')">not</button>
+                    </div>
+
+                    <div class="key shift left">
+                        <button (click)="addPhrase('or')">or</button>
+                    </div>
+
+                    <div class="key shift left">
+                        <button (click)="addPhrase('thanks')">thanks</button>
+                    </div>
+
+                    <div class="key shift left">
+                        <button (click)="addPhrase('think')">think</button>
+                    </div>
+
+                    <div class="key shift left">
+                        <button (click)="addPhrase('up')">up</button>
+                    </div>
+
+                    <div class="key shift left yes">
+                        <button (click)="addPhrase('YES')">YES</button>
+                    </div>
+
+                    <div class="key shift left no">
+                        <button (click)="addPhrase('NO')">NO</button>
+                    </div>
+
+                    <div class="key shift left ">
+                        <button (click)="addPhrase(' ')">SPACEBAR</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "n",
+    "public": "dist/rasp-app",
     "ignore": [
       "firebase.json",
       "**/.*",
