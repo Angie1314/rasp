@@ -21,8 +21,8 @@ export class NavBarComponent implements OnInit {
   this.parrot = '../../../../assets/images/parrot.png';
   this.routerEventsSubscription = router.events.subscribe((event: RouterEvent) => {
       if (event instanceof NavigationEnd) {
-        this.isAtHomePage = router.url === '/home';
-        this.isAtProfilePage = router.url === '/';
+        this.isAtHomePage = router.url === '/';
+        this.isAtProfilePage = router.url === '/phrasespage';
         // TODO possibly also set website tile here
       }
     });

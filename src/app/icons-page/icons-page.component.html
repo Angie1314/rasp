@@ -4,23 +4,38 @@
 
 <main class="container">
     <div class="images-container">
-        <div *ngFor="let animal of animal" class="img-container m-1 ">
-            <a class="btn" (click)="toggle(animal)"><img class="item-img w-100 h-100" src={{animal.src}} /></a>
-            <h4 [hidden]="animal.hide"  >{{animal.name}}</h4>
-            <audio [hidden]="animal.hide" controls>
-                <source src={{animal.audioSrc}} type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
+        <div *ngFor="let animal of animal" class="img-container shadow rounded border">
+            <h4>{{animal.name}}</h4>
+            <a class="btn" (click)="toggle(animal)"> <img src={{animal.src}} /></a>
+            <div class="toggle"></div>
+
+
+            <div class="col-sm-4 embed-responsive embed-responsive-4by3">
+                <audio class="embed-responsive-item" [hidden]="animal.hide" src={{animal.audioSrc}} type="audio/mpeg"
+                    controls>
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <a class="row-sm-4 img-blink embed-responsive" [hidden]="animal.hide"><img src={{animal.blinkSrc}} />
+                <img src={{animal.blinkSrc}} />
+                <img src={{animal.blinkSrc}} /></a>
+
+            <!-- <button class="btn" (click)="toggle(animal)">🔊</button> -->
+
         </div>
     </div>
-    
+
+    <div class="w-100 d-none d-sm-block d-md-none">
+        <!-- wrap every 2 on sm-->
+    </div>
+
     <div class="center text-secondary">
         Icons made by
         <a class="text-secondary"
             href="https://www.freepik.com/?__hstc=57440181.f63ab0c0fe668ba1a0148a97877fc498.1556274052829.1562128258197.1562133173486.11&__hssc=57440181.5.1562133173486&__hsfp=2292434412"
             title="Freepik">Freepik</a> from <a class="text-secondary" href="https://www.flaticon.com/"
             title="Flaticon">www.flaticon.com</a>
-            is licensed by <a class="text-secondary" href="http://creativecommons.org/licenses/by/3.0/"
+        is licensed by <a class="text-secondary" href="http://creativecommons.org/licenses/by/3.0/"
             title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
     </div>
 </main>

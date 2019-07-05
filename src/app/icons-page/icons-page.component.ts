@@ -52,7 +52,7 @@ export class IconsPageComponent implements OnInit {
     },
     {
       src: this.elephantImg = '../../assets/images/elephant.png', name: 'Elephant', description: 'Blah', hide: true,
-      audioSrc: '../../assets/audio/elephant1.mp3'
+      audioSrc: '../../assets/audio/elephant1.mp3', blinkSrc: '../../assets/images/elephantBlink.png'
     },
     {
       src: this.kangarooImg = '../../assets/images/kangaroo.png', name: 'Kangaroo', description: 'Blah', hide: true,
