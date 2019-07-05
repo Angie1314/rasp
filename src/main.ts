@@ -16,10 +16,18 @@ const isIos = () => {
   const userAgent = window.navigator.userAgent.toLowerCase();
   return /iphone|ipad|ipod/.test(userAgent);
 };
-// Detects if device is in standalone mode
-const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator);
 
-// Checks if should display install popup notification:
-if (isIos() && !isInStandaloneMode()) {
+if (isIos()) {
   this.setState({ showInstallMessage: true });
 }
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/ngsw-worker.js').then(() => (reg: any) => {
+      console.log('Successfully registered service worker', reg);
+  }).catch(() => (err: any)  => {
+      console.warn('Error whilst registering service worker', err);
+  });
+  }
+
+
+
