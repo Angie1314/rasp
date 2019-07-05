@@ -6,22 +6,17 @@
     <div class="images-container">
         <div *ngFor="let animal of animal" class="img-container shadow rounded border">
             <h4>{{animal.name}}</h4>
-            <a class="btn" (click)="toggle(animal)"> <img src={{animal.src}} /></a>
-            <div class="toggle"></div>
-
+            <a class="btn"> <img src={{animal.src}} /></a>
 
             <div class="col-sm-4 embed-responsive embed-responsive-4by3">
-                <audio class="embed-responsive-item" [hidden]="animal.hide" src={{animal.audioSrc}} type="audio/mpeg"
-                    controls>
-                    Your browser does not support the audio element.
-                </audio>
+                <a class="row-sm-4 img-blink embed-responsive" [hidden]="animal.hide"><img src={{animal.blinkSrc}} />
+                    <img src={{animal.blinkSrc}} />
+                    <img src={{animal.blinkSrc}} /></a>
+
+                <mat-basic-audio-player class="embed-responsive-item center" audioUrl="{{animal.audioSrc}}">
+                </mat-basic-audio-player>
+   
             </div>
-            <a class="row-sm-4 img-blink embed-responsive" [hidden]="animal.hide"><img src={{animal.blinkSrc}} />
-                <img src={{animal.blinkSrc}} />
-                <img src={{animal.blinkSrc}} /></a>
-
-            <!-- <button class="btn" (click)="toggle(animal)">🔊</button> -->
-
         </div>
     </div>
 

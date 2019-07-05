@@ -117,17 +117,8 @@ export class IconsPageComponent implements OnInit {
   ];
 
   constructor() { }
-  toggle(animal) {
-    animal.hide = !animal.hide;
-  }
 
-  getAnimal($event) {
-    // let text = '';
-    document.getElementById('box');
-  }
-
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
 
 }
