@@ -2,6 +2,7 @@ import { Component, AfterViewInit } from '@angular/core';
 
 import Keyboard from 'simple-keyboard';
 import 'simple-keyboard/build/css/index.css';
+import Speech from 'speak-tts';
 
 @Component({
   selector: 'app-keyboard',
@@ -11,8 +12,11 @@ import 'simple-keyboard/build/css/index.css';
 export class KeyboardComponent implements AfterViewInit {
   value = '';
   keyboard: Keyboard;
+  speech = new Speech();
+  getInputs = [];
 
   ngAfterViewInit() {
+
     this.keyboard = new Keyboard({
       onChange: input => this.onChange(input),
       onKeyPress: button => this.onKeyPress(button)
@@ -21,12 +25,17 @@ export class KeyboardComponent implements AfterViewInit {
 
   onChange = (input: string) => {
     this.value = input;
-    console.log('Input changed', input);
+    this.speech.speak({
+      text: input,
+    }).then(() => {
+      console.log('Success !');
+    }).catch(e => {
+      console.error('An error occurred :', e);
+    });
+
   }
 
   onKeyPress = (button: string) => {
-    console.log('Button pressed', button);
-
     if (button === '{shift}' || button === '{lock}') { this.handleShift(); }
   }
 
