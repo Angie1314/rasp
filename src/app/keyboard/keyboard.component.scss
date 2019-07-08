@@ -18,7 +18,7 @@ input {
 .simple-keyboard {
     max-width: 650px;
     text-align: center;
-    margin-left: 4px;
+    margin-left: 0px;
 }
 
 @media screen and (max-width:400px) {
@@ -38,11 +38,12 @@ input {
 
     .simple-keyboard {
         text-align: center;
+        padding: 0%;
     }
 }
 
 .keyboard {
-    margin-left: 28%;
+    margin-left: 0%;
 
 }
 
@@ -50,7 +51,7 @@ input {
 
     .keyboard {
         width: 100%;
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-left: 0px;
+        margin-right: 0px;
     }
 }

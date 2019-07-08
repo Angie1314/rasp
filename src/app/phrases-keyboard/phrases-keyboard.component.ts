@@ -18,7 +18,7 @@ export class PhrasesKeyboardComponent implements OnInit {
   speech = new Speech();
 
 
-  constructor() {  this.speech.setLanguage('en-ZA'); }
+  constructor() { }
 
   ngOnInit() {
   }
