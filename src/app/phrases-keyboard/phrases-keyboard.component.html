@@ -3,7 +3,7 @@
         <div class="img-container m-1 ">
             <div class="container">
                 <textarea [(ngModel)]="phrases" readonly class="col" matInput [value]="numberArray.join('')"></textarea>
-                <button type="button" class="btn btn-outline-dark" (click)="getPhrases($phrases)" type="button" value="Speak">🔊 Speak</button>
+                <button type="button" class="btn btn-outline-dark" (click)="getPhrases()" type="button" value="Speak">🔊 Speak</button>
                 <audio src='{{url}}'></audio>
 
                 <div class="images-container">
