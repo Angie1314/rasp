@@ -1,10 +1,293 @@
-<div class="keyboard mt-5">
+<main class="container">
+    <div class="images-container">
+        <div class="img-container m-1">
+            <textarea [(ngModel)]="phrases" readonly class="col" matInput [value]="numberArray.join('')"></textarea>
+            <button type="button" class="btn btn-outline-dark" (click)="getPhrases()" type="button" value="Speak">🔊
+                Speak</button>
+
+            <div class="images-container">
+                <div class="key shift left ">
+                    <button (click)="addPhrase(' ')">SPACEBAR</button>
+                </div>
+
+                <div class="key shift left ">
+                    <button (click)="clearSearch()"><i class="fas fa-backspace"></i></button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('a')">a</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('at')">at</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('can')">can</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('have')">have</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('I')">I</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('like')">like</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('of')">of</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('please')">please</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('that')">that</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('they')">they</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('was')"> was</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('we')"> we</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('about')">about</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('are')">are</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('do')">do</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('he')">he</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('in')">in</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('me')">me</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('off')">off</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('said')">said</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('the')">the</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('this')">this</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('want')">want</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('were')">were</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('all')">all</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('be')">be</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('every')">every</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('had')">had</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('is')">is</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('my')">my</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('on')">on</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('she')">she</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('their')">their</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('to')">to</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('will')">will</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('you')">you</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('an')">an</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('but')">but</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('for')">for</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('help')">help</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('it')">it</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('only')">only</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('some')">some</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('them')">them</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('us')">us</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('with')">with</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('your')">your</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('and')">and</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('by')">by</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('feel')">feel</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('his')">his</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('know')">know</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('not')">not</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('or')">or</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('thanks')">thanks</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('think')">think</button>
+                </div>
+
+                <div class="key shift left">
+                    <button (click)="addPhrase('up')">up</button>
+                </div>
+
+                <div class="key shift left yes">
+                    <button (click)="addPhrase('YES')">YES</button>
+                </div>
+
+                <div class="key shift left no">
+                    <button (click)="addPhrase('NO')">NO</button>
+                </div>
+
+                <div class="key shift left ">
+                    <button (click)="addPhrase(' ')">SPACEBAR</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<!-- <div class="images-container">
+    <div *ngFor="let animal of animal" class="img-container shadow rounded border">
+        <h4>{{animal.name}}</h4>
+        <button type="button" class="btn" (click)="getPhrases(animal.name)" type="button" value="Speak"><img
+                src={{animal.src}} /></button>
+    </div>
+</div>
+
+<div class="w-100 d-none d-sm-block d-md-none"></div>
+
+<div class="center text-secondary">
+    Icons made by
+    <a class="text-secondary"
+        href="https://www.freepik.com/?__hstc=57440181.f63ab0c0fe668ba1a0148a97877fc498.1556274052829.1562128258197.1562133173486.11&__hssc=57440181.5.1562133173486&__hsfp=2292434412"
+        title="Freepik">Freepik</a> from <a class="text-secondary" href="https://www.flaticon.com/"
+        title="Flaticon">www.flaticon.com</a>is licensed by <a class="text-secondary"
+        href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0
+        BY</a>
+</div>
+</main> -->
+
+
+<!-- <div class="keyboard mt-5">
     <div class="row row-no-gutters">
         <div class="img-container m-1 ">
             <div class="container">
                 <textarea [(ngModel)]="phrases" readonly class="col" matInput [value]="numberArray.join('')"></textarea>
-                <button type="button" class="btn btn-outline-dark" (click)="getPhrases()" type="button" value="Speak">🔊 Speak</button>
-                <audio src='{{url}}'></audio>
+                <button type="button" class="btn btn-outline-dark" (click)="getPhrases()" type="button" value="Speak">🔊
+                    Speak</button>
 
                 <div class="images-container">
                     <div class="key shift left ">
@@ -258,4 +541,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->

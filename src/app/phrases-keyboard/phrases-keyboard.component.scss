@@ -8,7 +8,6 @@
     height: 320px;
     margin: 0px auto;
     border-radius: 9px;
-    padding: 30px;
     color: rgb(92, 89, 89);
 }
 
@@ -46,37 +45,6 @@ input {
     color: red;
 }
 
-.small {
-    font-size: 10px;
-    line-height: 13px;
-    text-align: center;
-    padding: 0 5px;
-    padding-top: 2px;
-    height: 28px !important;
-}
-
-.space1 {
-    margin-right: 43px !important;
-}
-
-.backspace {
-    width: 84px;
-    font-size: 12px;
-}
-
-.caps {
-    width: 70px;
-    font-size: 12px;
-    line-height: 18px;
-}
-
-.enter {
-    width: 92px;
-    line-height: 40px;
-    text-align: center;
-    padding-left: 0;
-}
-
 .shift.left {
     width: 90px;
     line-height: 40px;
@@ -98,24 +66,80 @@ button {
 
 }
 
+// .images-container {
+//     display: grid;
+//     grid-template-columns: auto auto auto auto;
+//     padding: 30px;
+// }
+
+// .image-container {
+//     position: relative;
+// }
+
+// @media screen and (max-width:600px) {
+//     .images-container {
+//         grid-template-columns:  auto auto auto;
+//         padding: 4x;
+//     }
+// }
+
+// @media screen and (max-width:300px) {
+//     .images-container {
+//         grid-template-columns:  auto auto;
+//         padding: 4px;
+//     }
+// }
+
+main {
+    padding: 80px 0px;
+}
+
 .images-container {
     display: grid;
-    grid-template-columns: auto auto auto;
-    padding: 30px;
+    grid-template-columns: auto auto auto auto;
+
 }
+
+.img-container {
+    text-align: center;
+}
+
 
 .image-container {
     position: relative;
+
 }
 
 @media screen and (max-width:400px) {
+    main {
+        padding: 3px, 0px;
+    }
+
     .images-container {
-        grid-template-columns: auto auto;
+        grid-template-columns: auto auto auto;
+        padding: 3px, 0px;
+    }
+
+    .img-container {
+        text-align: center;
+        margin: 8px;
+        padding: 8px;
     }
 }
 
 @media screen and (max-width:300px) {
-    .images-container {
-        grid-template-columns: auto;
+    main {
+        padding: 8px, 0px;
     }
+
+    .images-container {
+        grid-template-columns: auto auto;
+    }
+
+    .img-container {
+        text-align: center;
+        margin: 8px;
+        padding: 8px;
+    }
+
 }

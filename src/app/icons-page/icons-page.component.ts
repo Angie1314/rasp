@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+import Speech from 'speak-tts';
 @Component({
   selector: 'app-icons-page',
   templateUrl: './icons-page.component.html',
@@ -28,6 +29,8 @@ export class IconsPageComponent implements OnInit {
   lizzardImg: string;
   lionImg: string;
   parrot1Img: string;
+
+  speech = new Speech();
 
   animal = [
     {
@@ -115,6 +118,20 @@ export class IconsPageComponent implements OnInit {
       audioSrc: '../../assets/audio/toucan1.mp3'
     },
   ];
+
+  getPhrases($pharses) {
+    // https://www.npmjs.com/package/speak-tts
+    // const phrase = this.animal.name.toString();
+    const phrase = $pharses;
+    this.speech.speak({
+      text: phrase,
+    }).then(() => {
+      console.log('Success !');
+    }).catch(e => {
+      console.error('An error occurred :', e);
+    });
+
+  }
 
   constructor() { }
 

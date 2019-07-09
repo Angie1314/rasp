@@ -17,11 +17,12 @@ export class PhrasesKeyboardComponent implements OnInit {
   trustedUrl: any;
   speech = new Speech();
 
-
-  constructor() { }
-
-  ngOnInit() {
+  constructor() {
+    this.speech.setLanguage('en-US');
+    this.speech.setVolume(1);
   }
+
+  ngOnInit() { }
 
   onInputChange = (event: any) => {
     this.phraseskey.setInput(event.target.value);
@@ -34,7 +35,7 @@ export class PhrasesKeyboardComponent implements OnInit {
   getPhrases() {
     // https://www.npmjs.com/package/speak-tts
     const phrase = this.numberArray.toString();
-    console.log(phrase);
+
     this.speech.speak({
       text: phrase,
     }).then(() => {
@@ -43,10 +44,13 @@ export class PhrasesKeyboardComponent implements OnInit {
       console.error('An error occurred :', e);
     });
 
-    // this.url = ' https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=' + phrase;
-    // this.trustedUrl = this.sanitizer.bypassSecurityTrustUrl(this.url);
-    // return this.url;
   }
+
+  // get_Phrases(phrase) {
+  //   phrase = this.numberArray.toString();
+  //   this.url = ' https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=af&q=' + phrase;
+  //   return this.url;
+  // }
 
   clearSearch() {
     this.numberArray.pop();

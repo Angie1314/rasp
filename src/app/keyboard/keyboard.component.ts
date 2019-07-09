@@ -16,6 +16,8 @@ export class KeyboardComponent implements AfterViewInit {
   getInputs = [];
 
   ngAfterViewInit() {
+    this.speech.setLanguage('en-AU');
+    this.speech.setVolume(1);
 
     this.keyboard = new Keyboard({
       onChange: input => this.onChange(input),
@@ -25,8 +27,9 @@ export class KeyboardComponent implements AfterViewInit {
 
   onChange = (input: string) => {
     this.value = input;
+
     this.speech.speak({
-      text: input,
+      text: input
     }).then(() => {
       console.log('Success !');
     }).catch(e => {

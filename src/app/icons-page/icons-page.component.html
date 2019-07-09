@@ -6,27 +6,20 @@
     <div class="images-container">
         <div *ngFor="let animal of animal" class="img-container shadow rounded border">
             <h4>{{animal.name}}</h4>
-            <button class="btn"><img src={{animal.src}} /></button>
-            <!-- <audio src="{{animal.audioSrc}}" hidden></audio> -->
-            <div class="col-sm-4 embed-responsive embed-responsive-4by3" wmode="transparent">
-                <mat-basic-audio-player class="embed-responsive-item" wmode="transparent"
-                    audioUrl="{{animal.audioSrc}}">
-                </mat-basic-audio-player>
-            </div>
+            <button type="button" class="btn" (click)="getPhrases(animal.name)" type="button" value="Speak"><img
+                    src={{animal.src}} /></button>
         </div>
     </div>
 
-    <div class="w-100 d-none d-sm-block d-md-none">
-
-    </div>
+    <div class="w-100 d-none d-sm-block d-md-none"></div>
 
     <div class="center text-secondary">
         Icons made by
         <a class="text-secondary"
             href="https://www.freepik.com/?__hstc=57440181.f63ab0c0fe668ba1a0148a97877fc498.1556274052829.1562128258197.1562133173486.11&__hssc=57440181.5.1562133173486&__hsfp=2292434412"
             title="Freepik">Freepik</a> from <a class="text-secondary" href="https://www.flaticon.com/"
-            title="Flaticon">www.flaticon.com</a>
-        is licensed by <a class="text-secondary" href="http://creativecommons.org/licenses/by/3.0/"
-            title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+            title="Flaticon">www.flaticon.com</a>is licensed by <a class="text-secondary"
+            href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0
+            BY</a>
     </div>
 </main>
