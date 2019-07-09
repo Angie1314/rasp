@@ -40,6 +40,7 @@ export class SpeakComponent {
   lionImg: string;
   parrot1Img: string;
 
+
   animal = [
     {
       src: this.penguinImg = '../../assets/images/penguin.png', name: 'Penguin', description: 'Blah', hide: true,

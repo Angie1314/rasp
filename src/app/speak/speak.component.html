@@ -3,11 +3,15 @@
 </nav>
 
 <main class="mt">
+    <div *ngIf="message === 'butterfly'">
+        <img src="../../assets/images/butterfly.png" />
+    </div>
     <p>Name: {{message}}</p>
     <button class='btn btn-outline-info' [disabled]="service.started$ | async" (click)="listen()">listen</button>
 </main>
 
 <!-- <main class="container">
+    https://github.com/kamiazya/ngx-speech-recognition
     <div class="images-container">
         <div *ngFor="let animal of animal" class="img-container shadow rounded border">
             <button type="button" class="btn mb-5" (click)="getPhrases(animal.name)" type="button" value="Speak"><img
