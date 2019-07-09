@@ -1,0 +1,63 @@
+button {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    width: 90px;
+    line-height: 40px;
+    font-size: 24px;
+
+}
+
+main {
+    padding: 80px 0px;
+}
+
+.images-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+
+}
+
+.img-container {
+    text-align: center;
+}
+
+
+.image-container {
+    position: relative;
+
+}
+
+@media screen and (max-width:400px) {
+    main {
+        padding: 3px, 0px;
+    }
+
+    .images-container {
+        grid-template-columns: auto auto;
+        padding: 3px, 0px;
+    }
+
+    .img-container {
+        text-align: center;
+        margin: 8px;
+        padding: 8px;
+    }
+}
+
+@media screen and (max-width:300px) {
+    main {
+        padding: 8px, 0px;
+    }
+
+    .images-container {
+        grid-template-columns: auto auto;
+    }
+
+    .img-container {
+        text-align: center;
+        margin: 8px;
+        padding: 8px;
+    }
+
+}
