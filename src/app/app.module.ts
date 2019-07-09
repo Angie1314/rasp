@@ -21,6 +21,8 @@ import { environment } from '../environments/environment';
 
 
 import { NgxAudioPlayerModule } from 'ngx-audio-player';
+import { SpeakComponent } from './speak/speak.component';
+import { SpeechRecognitionModule } from '@kamiazya/ngx-speech-recognition';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import { NgxAudioPlayerModule } from 'ngx-audio-player';
     IconsPageComponent,
     NavBarComponent,
     KeyboardPageComponent,
-    PhrasesKeyboardComponent
+    PhrasesKeyboardComponent,
+    SpeakComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +43,11 @@ import { NgxAudioPlayerModule } from 'ngx-audio-player';
     AngularFontAwesomeModule,
     FormsModule,
     NgxAudioPlayerModule,
+    SpeechRecognitionModule.withConfig({
+      lang: 'en-US',
+      interimResults: true,
+      maxAlternatives: 10,
+    }),
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],

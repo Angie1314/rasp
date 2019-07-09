@@ -4,6 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { PharsesPageComponent } from './pharses-page/pharses-page.component';
 import { IconsPageComponent } from './icons-page/icons-page.component';
 import { KeyboardPageComponent } from './keyboard-page/keyboard-page.component';
+import { SpeakComponent } from './speak/speak.component';
 
 const routes: Routes = [{
   path: 'login',
@@ -17,6 +18,9 @@ const routes: Routes = [{
 }, {
   path: 'keyboardpage',
   component: KeyboardPageComponent
+}, {
+  path: 'speak',
+  component: SpeakComponent
 }
 ];
 

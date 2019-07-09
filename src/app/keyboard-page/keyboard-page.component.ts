@@ -56,7 +56,5 @@ export class KeyboardPageComponent implements OnInit {
     this.phrases = null;
     this.numberArray.pop();
   }
-
-
 }
 
