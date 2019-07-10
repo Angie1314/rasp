@@ -16,7 +16,7 @@ import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 })
 export class SpeakComponent {
 
-  message = '';
+  message = 'racon';
   allMessages = [];
 
   owlImg: string;
@@ -147,16 +147,16 @@ export class SpeakComponent {
     config.showNavigationIndicators = false;
   }
 
-  listen() {
-    this.service
-      .listen()
-      .pipe(resultList)
-      .subscribe((list: SpeechRecognitionResultList) => {
-        this.message = list.item(0).item(0).transcript;
-        console.log('RxComponent:onresult', this.message, list);
-        this.allMessages.push(this.message);
-        this.allMessages.toString();
-      });
-  }
+  // listen() {
+  //   this.service
+  //     .listen()
+  //     .pipe(resultList)
+  //     .subscribe((list: SpeechRecognitionResultList) => {
+  //       this.message = list.item(0).item(0).transcript;
+  //       console.log('RxComponent:onresult', this.message, list);
+  //       this.allMessages.push(this.message);
+  //       this.allMessages.toString();
+  //     });
+  // }
 
 }

@@ -1,17 +1,9 @@
-.mt {
-    margin-top: 10%;
-}
-
 .center {
     text-align: center;
 }
 
 .marginTop {
     margin-top: 40%;
-}
-
-.py {
-    padding: 30%;
 }
 
 main {
@@ -29,10 +21,8 @@ main {
     padding: 10px;
 }
 
-
 .image-container {
     position: relative;
-
 }
 
 @media screen and (max-width:400px) {
@@ -65,5 +55,4 @@ main {
         margin: 8px;
         padding: 8px;
     }
-
 }

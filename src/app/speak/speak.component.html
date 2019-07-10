@@ -5,7 +5,7 @@
 <main class="mt">
     <ngb-carousel *ngIf='images' [showNavigationIndicators]="showNavigationIndicators" data-interval="false">
         <ng-template ngbSlide>
-            <div class="centerize">
+            <div class="centerize align-items-center">
                 <img [src]="images[0]" alt="Animals">
             </div>
             <div class="centerize text-secondary">
@@ -14,7 +14,7 @@
                 <button class='btn' [disabled]="service.started$ | async" (click)="listen()"><i
                         class="fas fa-microphone iconColor fa-lg"></i></button>
                 <p *ngIf="message === 'toucan'">{{message}}</p>
-                <p *ngIf="message === '!toucan'">Please try again</p>
+                <p *ngIf="message != 'toucan'">Please try again</p>
             </div>
         </ng-template>
 
@@ -26,8 +26,8 @@
                 <h3>What animal am I</h3>
                 <button class='btn' [disabled]="service.started$ | async" (click)="listen()"><i
                         class="fas fa-microphone iconColor fa-lg"></i></button>
-                <p *ngIf="message === 'racoon'">{{message}}</p>
-                <p *ngIf="message === '!racoon'">Please try again</p>
+                <p *ngIf="message === 'skunk'">{{message}}</p>
+                <p *ngIf="message != 'skunk'">Please try again</p>
             </div>
         </ng-template>
 
@@ -40,7 +40,7 @@
                 <button class='btn' [disabled]="service.started$ | async" (click)="listen()"><i
                         class="fas fa-microphone iconColor fa-lg"></i></button>
                 <p *ngIf="message === 'rhino'">{{message}}</p>
-                <p *ngIf="message === '!rhino'">Please try again</p>
+                <p *ngIf="message != 'rhino'">Please try again</p>
             </div>
         </ng-template>
 
@@ -53,7 +53,7 @@
                 <button class='btn' [disabled]="service.started$ | async" (click)="listen()"><i
                         class="fas fa-microphone iconColor fa-lg"></i></button>
                 <p *ngIf="message === 'snail'">{{message}}</p>
-                <p *ngIf="message === '!snail'">Please try again</p>
+                <p *ngIf="message != 'snail'">Please try again</p>
             </div>
         </ng-template>
 
@@ -66,20 +66,20 @@
                 <button class='btn' [disabled]="service.started$ | async" (click)="listen()"><i
                         class="fas fa-microphone iconColor fa-lg"></i></button>
                 <p *ngIf="message === 'zebra'">{{message}}</p>
-                <p *ngIf="message === '!zebra'">Please try again</p>
+                <p *ngIf="message != 'zebra'">Please try again</p>
             </div>
         </ng-template>
 
         <ng-template ngbSlide>
-            <div class="centerize">
+            <div class="centerize align-items-center">
                 <img [src]="images[5]" alt="Animals">
             </div>
             <div class="centerize text-secondary">
                 <h3>What animal am I</h3>
                 <button class='btn' [disabled]="service.started$ | async" (click)="listen()"><i
                         class="fas fa-microphone iconColor fa-lg"></i></button>
-                <p *ngIf="message === 'skunk'">{{message}}</p>
-                <p *ngIf="message === '!skunk'">Please try again</p>
+                <p *ngIf="message === 'racoon'">{{message}}</p>
+                <p *ngIf="message != 'racoon'">Please try again</p>
             </div>
         </ng-template>
     </ngb-carousel>

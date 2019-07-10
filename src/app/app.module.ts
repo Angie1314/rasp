@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
-import { KeyboardComponent } from './keyboard/keyboard.component';
 import { PharsesPageComponent } from './pharses-page/pharses-page.component';
 import { IconsPageComponent } from './icons-page/icons-page.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
@@ -24,7 +23,6 @@ import { SpeechRecognitionModule } from '@kamiazya/ngx-speech-recognition';
 @NgModule({
   declarations: [
     AppComponent,
-    KeyboardComponent,
     PharsesPageComponent,
     IconsPageComponent,
     NavBarComponent,

@@ -83,7 +83,7 @@ export class PhrasesKeyboardComponent implements OnInit {
     this.numberArray.push(button);
   }
 
-  getPhrases($phrase) {
+  getPhrases() {
 
     const phrase = this.numberArray.toString();
 

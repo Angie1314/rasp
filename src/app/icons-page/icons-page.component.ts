@@ -120,7 +120,6 @@ export class IconsPageComponent implements OnInit {
   ];
 
   getPhrases($pharses) {
-    // https://www.npmjs.com/package/speak-tts
     const phrase = $pharses;
     this.speech.speak({
       text: phrase,
@@ -135,6 +134,4 @@ export class IconsPageComponent implements OnInit {
   constructor() { }
 
   ngOnInit() { }
-
-
 }
