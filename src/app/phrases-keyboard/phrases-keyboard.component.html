@@ -6,252 +6,51 @@
                 Speak</button>
 
             <div class="images-container">
-                <div class="btn btn-outline-info mb-3 mr-1 ">
+
+                <div class="btn btn-outline-light mb-3 mr-1 ">
                     <button class="display-3" (click)="addPhrase(' ')">SPACE</button>
                 </div>
 
-                <div class="btn btn-outline-info mb-3 mr-1">
+                <div class="btn btn-outline-light mb-3 mr-1 ">
+                    <button class="display-3" (click)="addPhrase('.')">.</button>
+                </div>
+
+                <div class="btn btn-outline-light mb-3 mr-1 ">
+                    <button class="display-3" (click)="addPhrase(',')">,</button>
+                </div>
+
+                <div class="btn btn-outline-light mb-3 mr-1">
                     <button (click)="backspace()"><i class="fas fa-backspace"></i></button>
                 </div>
 
-                <div class="btn btn-outline-success mb-3 mr-1">
-                    <button (click)="addPhrase('a')">a</button>
+                <div *ngFor="let preposition of prepositions" class="images-container">
+                    <div class="btn btn-outline-info mb-3 mr-1 ">
+                        <button class="display-3" (click)="addPhrase(preposition)">{{preposition}}</button>
+                    </div>
                 </div>
 
-                <div class="btn btn-outline-success mb-3 mr-1">
-                    <button (click)="addPhrase('at')">at</button>
+                <div *ngFor="let verb of verbs">
+                    <div class="btn btn-outline-primary mb-3 mr-1 ">
+                        <button class="display-3" (click)="addPhrase(verb)">{{verb}}</button>
+                    </div>
                 </div>
 
-                <div class="btn btn-outline-success mb-3 mr-1">
-                    <button (click)="addPhrase('can')">can</button>
+                <div *ngFor="let pronoun of pronouns">
+                    <div class="btn btn-outline-warning mb-3 mr-1 ">
+                        <button class="display-3" (click)="addPhrase(pronoun)">{{pronoun}}</button>
+                    </div>
                 </div>
 
-                <div class="btn btn-outline-success mb-3 mr-1">
-                    <button (click)="addPhrase('have')">have</button>
+                <div *ngFor="let conjunction of conjunctions">
+                    <div class="btn btn-outline-success mb-3 mr-1 ">
+                        <button class="display-3" (click)="addPhrase(conjunction)">{{conjunction}}</button>
+                    </div>
                 </div>
 
-                <div class="btn btn-outline-primary mb-3 mr-1">
-                    <button (click)="addPhrase('I')">I</button>
-                </div>
-
-                <div class="btn btn-outline-success mb-3 mr-1">
-                    <button (click)="addPhrase('like')">like</button>
-                </div>
-
-                <div class="btn btn-outline-success mb-3 mr-1">
-                    <button (click)="addPhrase('of')">of</button>
-                </div>
-
-                <div class="btn btn-outline-info mb-3 mr-1">
-                    <button (click)="addPhrase('please')">please</button>
-                </div>
-
-                <div class="btn btn-outline-success mb-3 mr-1">
-                    <button (click)="addPhrase('that')">that</button>
-                </div>
-
-                <div class="btn btn-outline-primary mb-3 mr-1">
-                    <button (click)="addPhrase('they')">they</button>
-                </div>
-
-                <div class="btn btn-outline-info mb-3 mr-1">
-                    <button (click)="addPhrase('was')"> was</button>
-                </div>
-
-                <div class="btn btn-outline-primary mb-3 mr-1">
-                    <button (click)="addPhrase('we')">we</button>
-                </div>
-
-                <div class="btn btn-outline-info mb-3 mr-1">
-                    <button (click)="addPhrase('about')">about</button>
-                </div>
-
-                <div class="btn btn-outline-info mb-3 mr-1">
-                    <button (click)="addPhrase('are')">are</button>
-                </div>
-
-                <div class="btn btn-outline-info mb-3 mr-1">
-                    <button (click)="addPhrase('do')">do</button>
-                </div>
-
-                <div class="btn btn-outline-primary mb-3 mr-1">
-                    <button (click)="addPhrase('he')">he</button>
-                </div>
-
-                <div class="btn btn-outline-success mb-3 mr-1">
-                    <button (click)="addPhrase('in')">in</button>
-                </div>
-
-                <div class="btn btn-outline-primary mb-3 mr-1">
-                    <button (click)="addPhrase('me')">me</button>
-                </div>
-
-                <div class="btn btn-outline-success mb-3 mr-1">
-                    <button (click)="addPhrase('off')">off</button>
-                </div>
-
-                <div class="btn btn-outline-info mb-3 mr-1">
-                    <button (click)="addPhrase('said')">said</button>
-                </div>
-
-                <div class="btn btn-outline-success mb-3 mr-1">
-                    <button (click)="addPhrase('the')">the</button>
-                </div>
-
-                <div class="btn btn-outline-success mb-3 mr-1">
-                    <button (click)="addPhrase('this')">this</button>
-                </div>
-
-                <div class="btn btn-outline-warning mb-3 mr-1">
-                    <button (click)="addPhrase('want')">want</button>
-                </div>
-
-                <div class="btn btn-outline-warning mb-3 mr-1">
-                    <button (click)="addPhrase('were')">were</button>
-                </div>
-
-                <div class="btn btn-outline-info mb-3 mr-1">
-                    <button (click)="addPhrase('all')">all</button>
-                </div>
-
-                <div class="btn btn-outline-warning mb-3 mr-1">
-                    <button (click)="addPhrase('be')">be</button>
-                </div>
-
-                <div class="btn btn-outline-info mb-3 mr-1">
-                    <button (click)="addPhrase('every')">every</button>
-                </div>
-
-                <div class="btn btn-outline-info mb-3 mr-1">
-                    <button (click)="addPhrase('had')">had</button>
-                </div>
-
-                <div class="btn btn-outline-success mb-3 mr-1">
-                    <button (click)="addPhrase('is')">is</button>
-                </div>
-
-                <div class="btn btn-outline-primary mb-3 mr-1">
-                    <button (click)="addPhrase('my')">my</button>
-                </div>
-
-                <div class="btn btn-outline-success mb-3 mr-1">
-                    <button (click)="addPhrase('on')">on</button>
-                </div>
-
-                <div class="btn btn-outline-primary mb-3 mr-1">
-                    <button (click)="addPhrase('she')">she</button>
-                </div>
-
-                <div class="btn btn-outline-primary mb-3 mr-1">
-                    <button (click)="addPhrase('their')">their</button>
-                </div>
-
-                <div class="btn btn-outline-success mb-3 mr-1">
-                    <button (click)="addPhrase('to')">to</button>
-                </div>
-
-                <div class="btn btn-outline-info mb-3 mr-1">
-                    <button (click)="addPhrase('will')">will</button>
-                </div>
-
-                <div class="btn btn-outline-primary mb-3 mr-1">
-                    <button (click)="addPhrase('you')">you</button>
-                </div>
-
-                <div class="btn btn-outline-success mb-3 mr-1">
-                    <button (click)="addPhrase('an')">an</button>
-                </div>
-
-                <div class="btn btn-outline-success mb-3 mr-1">
-                    <button (click)="addPhrase('but')">but</button>
-                </div>
-
-                <div class="btn btn-outline-success mb-3 mr-1">
-                    <button (click)="addPhrase('for')">for</button>
-                </div>
-
-                <div class="btn btn-outline-info mb-3 mr-1">
-                    <button (click)="addPhrase('help')">help</button>
-                </div>
-
-                <div class="btn btn-outline-primary mb-3 mr-1">
-                    <button (click)="addPhrase('it')">it</button>
-                </div>
-
-                <div class="btn btn-outline-success mb-3 mr-1">
-                    <button (click)="addPhrase('only')">only</button>
-                </div>
-
-                <div class="btn btn-outline-success mb-3 mr-1">
-                    <button (click)="addPhrase('some')">some</button>
-                </div>
-
-                <div class="btn btn-outline-primary mb-3 mr-1">
-                    <button (click)="addPhrase('them')">them</button>
-                </div>
-
-                <div class="btn btn-outline-primary mb-3 mr-1">
-                    <button (click)="addPhrase('us')">us</button>
-                </div>
-
-                <div class="btn btn-outline-success mb-3 mr-1">
-                    <button (click)="addPhrase('with')">with</button>
-                </div>
-
-                <div class="btn btn-outline-primary mb-3 mr-1">
-                    <button (click)="addPhrase('your')">your</button>
-                </div>
-
-                <div class="btn btn-outline-success mb-3 mr-1">
-                    <button (click)="addPhrase('and')">and</button>
-                </div>
-
-                <div class="btn btn-outline-success mb-3 mr-1">
-                    <button (click)="addPhrase('by')">by</button>
-                </div>
-
-                <div class="btn btn-outline-warning mb-3 mr-1">
-                    <button (click)="addPhrase('feel')">feel</button>
-                </div>
-
-                <div class="btn btn-outline-primary mb-3 mr-1">
-                    <button (click)="addPhrase('his')">his</button>
-                </div>
-
-                <div class="btn btn-outline-success mb-3 mr-1">
-                    <button (click)="addPhrase('know')">know</button>
-                </div>
-
-                <div class="btn btn-outline-success mb-3 mr-1">
-                    <button (click)="addPhrase('not')">not</button>
-                </div>
-
-                <div class="btn btn-outline-success mb-3 mr-1">
-                    <button (click)="addPhrase('or')">or</button>
-                </div>
-
-                <div class="btn btn-outline-warning mb-3 mr-1">
-                    <button (click)="addPhrase('thanks')">thanks</button>
-                </div>
-
-                <div class="btn btn-outline-warning mb-3 mr-1">
-                    <button (click)="addPhrase('think')">think</button>
-                </div>
-
-                <div class="btn btn-outline-success mb-3 mr-1">
-                    <button (click)="addPhrase('up')">up</button>
-                </div>
-
-                <div class="btn btn-outline-info mb-3 mr-1 yes">
-                    <button (click)="addPhrase('YES')">YES</button>
-                </div>
-
-                <div class="btn btn-outline-info mb-3 mr-1 no">
-                    <button (click)="addPhrase('NO')">NO</button>
-                </div>
-
-                <div class="btn btn-outline-info mb-3 mr-1">
-                    <button (click)="addPhrase(' ')">SPACE</button>
+                <div *ngFor="let adjective of adjectives">
+                    <div class="btn btn-outline-danger mb-3 mr-1 ">
+                        <button class="display-3" (click)="addPhrase(adjective)">{{adjective}}</button>
+                    </div>
                 </div>
             </div>
         </div>
