@@ -5,7 +5,9 @@
 <main class="mt">
     <ngb-carousel *ngIf='images' [showNavigationIndicators]="showNavigationIndicators" data-interval="false">
         <ng-template ngbSlide>
-            <img [src]="images[0]" alt="Animals">
+            <div class="centerize">
+                <img [src]="images[0]" alt="Animals">
+            </div>
             <div class="centerize text-secondary">
                 <h3>What animal am I</h3>
 
@@ -17,7 +19,9 @@
         </ng-template>
 
         <ng-template ngbSlide>
-            <img [src]="images[1]" alt="Animals">
+            <div class="centerize">
+                <img [src]="images[1]" alt="Animals">
+            </div>
             <div class="centerize text-secondary">
                 <h3>What animal am I</h3>
                 <button class='btn' [disabled]="service.started$ | async" (click)="listen()"><i
@@ -28,7 +32,9 @@
         </ng-template>
 
         <ng-template ngbSlide>
-            <img [src]="images[2]" alt="Animals">
+            <div class="centerize">
+                <img [src]="images[2]" alt="Animals">
+            </div>
             <div class="centerize text-secondary">
                 <h3>What animal am I</h3>
                 <button class='btn' [disabled]="service.started$ | async" (click)="listen()"><i
@@ -39,7 +45,9 @@
         </ng-template>
 
         <ng-template ngbSlide>
-            <img [src]="images[3]" alt="Animals">
+            <div class="centerize">
+                <img [src]="images[3]" alt="Animals">
+            </div>
             <div class="centerize text-secondary">
                 <h3>What animal am I</h3>
                 <button class='btn' [disabled]="service.started$ | async" (click)="listen()"><i
@@ -50,7 +58,9 @@
         </ng-template>
 
         <ng-template ngbSlide>
-            <img [src]="images[4]" alt="Animals">
+            <div class="centerize">
+                <img [src]="images[4]" alt="Animals">
+            </div>
             <div class="centerize text-secondary">
                 <h3>What animal am I</h3>
                 <button class='btn' [disabled]="service.started$ | async" (click)="listen()"><i
@@ -61,7 +71,9 @@
         </ng-template>
 
         <ng-template ngbSlide>
-            <img [src]="images[5]" alt="Animals">
+            <div class="centerize">
+                <img [src]="images[5]" alt="Animals">
+            </div>
             <div class="centerize text-secondary">
                 <h3>What animal am I</h3>
                 <button class='btn' [disabled]="service.started$ | async" (click)="listen()"><i
