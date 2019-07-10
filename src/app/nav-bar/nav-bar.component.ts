@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
 import { Subscription } from 'rxjs';
-import { Router, NavigationEnd, RouterEvent } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
@@ -17,16 +16,7 @@ export class NavBarComponent implements OnInit {
 
   routerEventsSubscription: Subscription;
 
-  constructor(private router: Router) {
-  this.parrot = '../../../../assets/images/parrot.png';
-  this.routerEventsSubscription = router.events.subscribe((event: RouterEvent) => {
-      if (event instanceof NavigationEnd) {
-        this.isAtHomePage = router.url === '/';
-        this.isAtProfilePage = router.url === '/phrasespage';
-        // TODO possibly also set website tile here
-      }
-    });
-  }
+  constructor() {this.parrot = '../../../../assets/images/parrot.png'; }
 
   ngOnInit() {
   }

@@ -3,34 +3,72 @@
 </nav>
 
 <main class="mt">
-    <div *ngIf="message === 'butterfly'">
-        <img src="../../assets/images/butterfly.png" />
-    </div>
-    <p>Name: {{message}}</p>
-    <button class='btn btn-outline-info' [disabled]="service.started$ | async" (click)="listen()">listen</button>
+    <ngb-carousel *ngIf='images' [showNavigationIndicators]="showNavigationIndicators" data-interval="false">
+        <ng-template ngbSlide>
+            <img [src]="images[0]" alt="Animals">
+            <div class="centerize text-secondary">
+                <h3>What animal am I</h3>
+
+                <button class='btn' [disabled]="service.started$ | async" (click)="listen()"><i
+                        class="fas fa-microphone iconColor fa-lg"></i></button>
+                <p *ngIf="message === 'toucan'">{{message}}</p>
+                <p *ngIf="message === '!toucan'">Please try again</p>
+            </div>
+        </ng-template>
+
+        <ng-template ngbSlide>
+            <img [src]="images[1]" alt="Animals">
+            <div class="centerize text-secondary">
+                <h3>What animal am I</h3>
+                <button class='btn' [disabled]="service.started$ | async" (click)="listen()"><i
+                        class="fas fa-microphone iconColor fa-lg"></i></button>
+                <p *ngIf="message === 'racoon'">{{message}}</p>
+                <p *ngIf="message === '!racoon'">Please try again</p>
+            </div>
+        </ng-template>
+
+        <ng-template ngbSlide>
+            <img [src]="images[2]" alt="Animals">
+            <div class="centerize text-secondary">
+                <h3>What animal am I</h3>
+                <button class='btn' [disabled]="service.started$ | async" (click)="listen()"><i
+                        class="fas fa-microphone iconColor fa-lg"></i></button>
+                <p *ngIf="message === 'rhino'">{{message}}</p>
+                <p *ngIf="message === '!rhino'">Please try again</p>
+            </div>
+        </ng-template>
+
+        <ng-template ngbSlide>
+            <img [src]="images[3]" alt="Animals">
+            <div class="centerize text-secondary">
+                <h3>What animal am I</h3>
+                <button class='btn' [disabled]="service.started$ | async" (click)="listen()"><i
+                        class="fas fa-microphone iconColor fa-lg"></i></button>
+                <p *ngIf="message === 'snail'">{{message}}</p>
+                <p *ngIf="message === '!snail'">Please try again</p>
+            </div>
+        </ng-template>
+
+        <ng-template ngbSlide>
+            <img [src]="images[4]" alt="Animals">
+            <div class="centerize text-secondary">
+                <h3>What animal am I</h3>
+                <button class='btn' [disabled]="service.started$ | async" (click)="listen()"><i
+                        class="fas fa-microphone iconColor fa-lg"></i></button>
+                <p *ngIf="message === 'zebra'">{{message}}</p>
+                <p *ngIf="message === '!zebra'">Please try again</p>
+            </div>
+        </ng-template>
+
+        <ng-template ngbSlide>
+            <img [src]="images[5]" alt="Animals">
+            <div class="centerize text-secondary">
+                <h3>What animal am I</h3>
+                <button class='btn' [disabled]="service.started$ | async" (click)="listen()"><i
+                        class="fas fa-microphone iconColor fa-lg"></i></button>
+                <p *ngIf="message === 'skunk'">{{message}}</p>
+                <p *ngIf="message === '!skunk'">Please try again</p>
+            </div>
+        </ng-template>
+    </ngb-carousel>
 </main>
-
-<!-- <main class="container">
-    https://github.com/kamiazya/ngx-speech-recognition
-    <div class="images-container">
-        <div *ngFor="let animal of animal" class="img-container shadow rounded border">
-            <button type="button" class="btn mb-5" (click)="getPhrases(animal.name)" type="button" value="Speak"><img
-                    src={{animal.src}} /></button>
-            <h5>Name: {{message}}</h5>
-            <button class='btn btn-outline-info' [disabled]="service.started$ | async"
-                (click)="listen()">listen</button>
-        </div>
-    </div>
-
-    <div class="w-100 d-none d-sm-block d-md-none"></div>
-
-    <div class="center text-secondary">
-        Icons made by
-        <a class="text-secondary"
-            href="https://www.freepik.com/?__hstc=57440181.f63ab0c0fe668ba1a0148a97877fc498.1556274052829.1562128258197.1562133173486.11&__hssc=57440181.5.1562133173486&__hsfp=2292434412"
-            title="Freepik">Freepik</a> from <a class="text-secondary" href="https://www.flaticon.com/"
-            title="Flaticon">www.flaticon.com</a>is licensed by <a class="text-secondary"
-            href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0
-            BY</a>
-    </div>
-</main> -->

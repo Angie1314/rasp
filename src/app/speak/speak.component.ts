@@ -1,9 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
-import {
-  RxSpeechRecognitionService,
-  resultList,
-} from '@kamiazya/ngx-speech-recognition';
+import { RxSpeechRecognitionService, resultList } from '@kamiazya/ngx-speech-recognition';
+
+import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-speak',
@@ -11,7 +10,9 @@ import {
   styleUrls: ['./speak.component.scss'],
   providers: [
     RxSpeechRecognitionService,
+    NgbCarouselConfig
   ],
+  encapsulation: ViewEncapsulation.None
 })
 export class SpeakComponent {
 
@@ -128,9 +129,23 @@ export class SpeakComponent {
     },
   ];
 
-  constructor(
-    public service: RxSpeechRecognitionService,
-  ) { }
+  images = [];
+
+
+  constructor(public service: RxSpeechRecognitionService, config: NgbCarouselConfig) {
+    this.images = ['../../assets/images/101-toucan.png',
+      '../../assets/images/101-skunk.png',
+      '../../assets/images/101-rhinoceros.png',
+      '../../assets/images/101-snail.png',
+      '../../assets/images/101-zebra.png',
+      '../../assets/images/101-racoon.png'
+    ];
+
+    config.wrap = false;
+    config.keyboard = false;
+    config.pauseOnHover = false;
+    config.showNavigationIndicators = false;
+  }
 
   listen() {
     this.service

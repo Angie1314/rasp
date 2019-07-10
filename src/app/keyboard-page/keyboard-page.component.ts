@@ -32,7 +32,6 @@ export class KeyboardPageComponent implements OnInit {
   }
 
   getPhrases() {
-    // https://www.npmjs.com/package/speak-tts
     const phrase = this.numberArray.toString();
 
     this.speech.speak({
@@ -45,13 +44,7 @@ export class KeyboardPageComponent implements OnInit {
 
   }
 
-  // get_Phrases(phrase) {
-  //   phrase = this.numberArray.toString();
-  //   this.url = ' https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=af&q=' + phrase;
-  //   return this.url;
-  // }
-
-  clearSearch() {
+  backspace() {
     this.numberArray.pop();
     this.phrases = null;
     this.numberArray.pop();

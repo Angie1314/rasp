@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
-import { LoginComponent } from './login/login.component';
 import { KeyboardComponent } from './keyboard/keyboard.component';
 import { PharsesPageComponent } from './pharses-page/pharses-page.component';
 import { IconsPageComponent } from './icons-page/icons-page.component';
@@ -19,15 +18,12 @@ import { FormsModule } from '@angular/forms';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 
-
-import { NgxAudioPlayerModule } from 'ngx-audio-player';
 import { SpeakComponent } from './speak/speak.component';
 import { SpeechRecognitionModule } from '@kamiazya/ngx-speech-recognition';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
     KeyboardComponent,
     PharsesPageComponent,
     IconsPageComponent,
@@ -42,7 +38,6 @@ import { SpeechRecognitionModule } from '@kamiazya/ngx-speech-recognition';
     NgbModule,
     AngularFontAwesomeModule,
     FormsModule,
-    NgxAudioPlayerModule,
     SpeechRecognitionModule.withConfig({
       lang: 'en-US',
       interimResults: true,

@@ -13,16 +13,12 @@ export class KeyboardComponent implements AfterViewInit {
   value = '';
   keyboard: Keyboard;
   speech = new Speech();
+
   getInputs = [];
 
   ngAfterViewInit() {
     this.speech.setLanguage('en-AU');
     this.speech.setVolume(1);
-
-    this.keyboard = new Keyboard({
-      onChange: input => this.onChange(input),
-      onKeyPress: button => this.onKeyPress(button)
-    });
   }
 
   onChange = (input: string) => {
@@ -36,24 +32,5 @@ export class KeyboardComponent implements AfterViewInit {
       console.error('An error occurred :', e);
     });
 
-  }
-
-  onKeyPress = (button: string) => {
-    if (button === '{shift}' || button === '{lock}') { this.handleShift(); }
-  }
-
-  onInputChange = (event: any) => {
-    this.keyboard.setInput(event.target.value);
-  }
-
-  handleShift = () => {
-    // tslint:disable-next-line: prefer-const
-    let currentLayout = this.keyboard.options.layoutName;
-    // tslint:disable-next-line: prefer-const
-    let shiftToggle = currentLayout === 'default' ? 'shift' : 'default';
-
-    this.keyboard.setOptions({
-      layoutName: shiftToggle
-    });
   }
 }

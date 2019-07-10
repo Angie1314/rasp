@@ -24,12 +24,3 @@ $primary-text-color: rgba(0, 0, 0, 0.747);
 .nav-link-bottom {
     color: $primary-text-color;
 }
-
-.active-nav-link {
-    border-top: 3px solid #00000000;
-    border-bottom: 3px solid $primary-text-color;
-}
-
-.active-nav-link-bottom {
-    color: #007bff;
-}

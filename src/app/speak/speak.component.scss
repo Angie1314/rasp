@@ -1,11 +1,28 @@
 .mt {
     margin-top: 80px;
     margin-left: 10px;
+    margin-right: 10px;
 }
 
+.centerize {
+    text-align: center
+}
+
+.iconColor {
+    color: grey;
+}
 
 main {
     padding: 80px 0px;
+}
+
+.carousel-control-prev-icon {
+    background-image: url('../../assets/images/clam.png');
+    color: black;
+}
+
+.carousel-control-next-icon {
+    background-image: url('../../assets/images/clamright.png');
 }
 
 .images-container {
@@ -18,7 +35,6 @@ main {
     margin: 4px;
     padding: 10px;
 }
-
 
 .image-container {
     position: relative;

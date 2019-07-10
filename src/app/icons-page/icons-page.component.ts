@@ -121,7 +121,6 @@ export class IconsPageComponent implements OnInit {
 
   getPhrases($pharses) {
     // https://www.npmjs.com/package/speak-tts
-    // const phrase = this.animal.name.toString();
     const phrase = $pharses;
     this.speech.speak({
       text: phrase,
