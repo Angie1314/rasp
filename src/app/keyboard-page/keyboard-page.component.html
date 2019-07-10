@@ -10,132 +10,18 @@
                 Speak</button>
 
             <div class="images-container">
-                <div class="btn btn-outline-info mb-3 mr-1 ">
+                <div class="btn btn-outline-light mb-3 mr-1 ">
                     <button class="display-3" (click)="addPhrase(' ')">SPACE</button>
                 </div>
 
-                <div class="btn btn-outline-info mb-3 mr-1">
+                <div class="btn btn-outline-light mb-3 mr-1">
                     <button (click)="backspace()"><i class="fas fa-backspace"></i></button>
                 </div>
 
-                <div class="btn btn-outline-success mb-3 mr-1">
-                    <button (click)="addPhrase('a')">a</button>
-                </div>
-
-                <div class="btn btn-outline-success mb-3 mr-1">
-                    <button (click)="addPhrase('b')">b</button>
-                </div>
-
-                <div class="btn btn-outline-success mb-3 mr-1">
-                    <button (click)="addPhrase('c')">c</button>
-                </div>
-
-                <div class="btn btn-outline-success mb-3 mr-1">
-                    <button (click)="addPhrase('d')">d</button>
-                </div>
-
-                <div class="btn btn-outline-primary mb-3 mr-1">
-                    <button (click)="addPhrase('e')">e</button>
-                </div>
-
-                <div class="btn btn-outline-success mb-3 mr-1">
-                    <button (click)="addPhrase('f')">f</button>
-                </div>
-
-                <div class="btn btn-outline-success mb-3 mr-1">
-                    <button (click)="addPhrase('g')">g</button>
-                </div>
-
-                <div class="btn btn-outline-info mb-3 mr-1">
-                    <button (click)="addPhrase('h')">h</button>
-                </div>
-
-                <div class="btn btn-outline-success mb-3 mr-1">
-                    <button (click)="addPhrase('i')">i</button>
-                </div>
-
-                <div class="btn btn-outline-primary mb-3 mr-1">
-                    <button (click)="addPhrase('j')">j</button>
-                </div>
-
-                <div class="btn btn-outline-info mb-3 mr-1">
-                    <button (click)="addPhrase('k')"> k</button>
-                </div>
-
-                <div class="btn btn-outline-primary mb-3 mr-1">
-                    <button (click)="addPhrase('l')">l</button>
-                </div>
-
-                <div class="btn btn-outline-info mb-3 mr-1">
-                    <button (click)="addPhrase('m')">m</button>
-                </div>
-
-                <div class="btn btn-outline-info mb-3 mr-1">
-                    <button (click)="addPhrase('n')">n</button>
-                </div>
-
-                <div class="btn btn-outline-info mb-3 mr-1">
-                    <button (click)="addPhrase('o')">o</button>
-                </div>
-
-                <div class="btn btn-outline-primary mb-3 mr-1">
-                    <button (click)="addPhrase('p')">p</button>
-                </div>
-
-                <div class="btn btn-outline-success mb-3 mr-1">
-                    <button (click)="addPhrase('q')">q</button>
-                </div>
-
-                <div class="btn btn-outline-primary mb-3 mr-1">
-                    <button (click)="addPhrase('r')">r</button>
-                </div>
-
-                <div class="btn btn-outline-success mb-3 mr-1">
-                    <button (click)="addPhrase('s')">s</button>
-                </div>
-
-                <div class="btn btn-outline-info mb-3 mr-1">
-                    <button (click)="addPhrase('t')">t</button>
-                </div>
-
-                <div class="btn btn-outline-success mb-3 mr-1">
-                    <button (click)="addPhrase('u')">u</button>
-                </div>
-
-                <div class="btn btn-outline-success mb-3 mr-1">
-                    <button (click)="addPhrase('v')">v</button>
-                </div>
-
-                <div class="btn btn-outline-warning mb-3 mr-1">
-                    <button (click)="addPhrase('w')">w</button>
-                </div>
-
-                <div class="btn btn-outline-warning mb-3 mr-1">
-                    <button (click)="addPhrase('x')">x</button>
-                </div>
-
-                <div class="btn btn-outline-info mb-3 mr-1">
-                    <button (click)="addPhrase('y')">y</button>
-                </div>
-
-                <div class="btn btn-outline-warning mb-3 mr-1">
-                    <button (click)="addPhrase('z')">z</button>
-                </div>
-
-                <div class="btn btn-outline-info mb-3 mr-1">
-                    <button (click)="addPhrase('.')">.</button>
-                </div>
-
-                <div class="btn btn-outline-info mb-3 mr-1">
-                    <button (click)="addPhrase(',')">,</button>
-                </div>
-
-                <div class="btn btn-outline-success mb-3 mr-1">
-                    <button (click)="addPhrase('!')">!</button>
-                </div>
-
-                <div class="btn btn-outline-info mb-3 mr-1">
-                    <button (click)="addPhrase(' ')">SPACE</button>
+                <div *ngFor="let alpha of alphabet" class="images-container">
+                    <div class="btn btn-outline-info mb-3 mr-1 ">
+                        <button class="display-3" (click)="addPhrase(alpha)">{{alpha}}</button>
+                    </div>
                 </div>
             </div>
         </div>

@@ -14,11 +14,21 @@ export class KeyboardPageComponent implements OnInit {
   phrases = '';
   url: string;
   trustedUrl: any;
+
   speech = new Speech();
+
+  alphabet = [];
 
   constructor() {
     this.speech.setLanguage('en-US');
     this.speech.setVolume(1);
+
+    this.alphabet = [
+      'a', 'b', 'c', 'd',
+      'e', 'f', 'g', 'h', 'i', 'j',
+      'k', 'l', 'm', 'n', 'o',
+      'p', 'q', 'r', 's', 't', 'u',
+      'v', 'w', 'x', 'y', 'z'];
   }
 
   ngOnInit() { }
