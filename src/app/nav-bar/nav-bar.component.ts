@@ -9,7 +9,7 @@ import { Router, NavigationEnd, RouterEvent } from '@angular/router';
   styleUrls: ['./nav-bar.component.scss']
 })
 export class NavBarComponent implements OnInit {
-  parrot;
+  logo;
 
   faUserCircle = faUserCircle;
   isAtHomePage = false;
@@ -18,7 +18,7 @@ export class NavBarComponent implements OnInit {
   routerEventsSubscription: Subscription;
 
   constructor(private router: Router) {
-  this.parrot = '../../../../assets/images/parrot.png';
+  this.logo = '../../../../assets/images/logo.png';
   this.routerEventsSubscription = router.events.subscribe((event: RouterEvent) => {
       if (event instanceof NavigationEnd) {
         this.isAtHomePage = router.url === '/home';
