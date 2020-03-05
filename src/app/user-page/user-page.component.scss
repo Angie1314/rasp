@@ -1,0 +1,109 @@
+figure {
+    margin-left: 100px;
+    /* half image width */
+    background: #007bff;
+    box-shadow: 0 0 1px;
+    border-radius: 3px;
+}
+
+img {
+    border-radius: 100%;
+    position: relative;
+    /* brings it at front, can trigger z-index too */
+    box-shadow: -1px 0 1px, 1px 0 1px white;
+    /* whatever U like */
+    vertical-align: middle;
+    right: 50px;
+    /* move visually from real position */
+    margin-right: -40px;
+    /* pull or push text aside */
+}
+
+figcaption {
+    display: inline-block;
+    vertical-align: middle;
+    color: white;
+}
+
+p {
+    margin: 0;
+}
+
+main {
+    padding: 100px 0px;
+}
+
+.image-size {
+    width: 100px;
+    object-fit: cover;
+}
+
+.images-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    position: relative;
+}
+
+@media screen and (max-width:500px) {
+    .images-size {
+        width: 100px;
+        object-fit: cover;
+    }
+
+    .images-container {
+        grid-template-columns: auto;
+      }
+
+    figure {
+        margin-left: 80px;
+        /* half image width */
+        background: #007bff;
+        box-shadow: 0 0 1px;
+        border-radius: 3px;
+        position: relative;
+        white-space: nowrap;
+    }
+}
+
+h4 {
+    color: green;
+  }
+
+@media screen and (max-width:400px) {
+    .images-size {
+        width: 100px;
+        object-fit: cover;
+    }
+
+    .images-container {
+        grid-template-columns: auto;
+      }
+
+    figure {
+        margin-left: 70px;
+        /* half image width */
+        background: #007bff;
+        box-shadow: 0 0 1px;
+        border-radius: 3px;
+        white-space: nowrap;
+    }
+}
+
+@media screen and (max-width:300px) {
+    .images-size {
+        width: 100px;
+        object-fit: cover;
+    }
+    .images-container {
+        grid-template-columns: auto;
+      }
+
+    figure {
+        margin-left: 60px;
+        /* half image width */
+        background: #007bff;
+        box-shadow: 0 0 1px;
+        border-radius: 3px;
+        white-space: nowrap;
+    }
+}

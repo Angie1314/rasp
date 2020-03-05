@@ -1,0 +1,62 @@
+<app-nav-bar></app-nav-bar>
+
+<main class="container">
+    <figure>
+        <img *ngIf="user.photoURL" [src]="user.photoURL" alt="profile picture"
+            class="rounded-circle image-size mr-3 ml-2 my-auto">
+        <figcaption>
+            <p>text</p>
+            <p>and more</p>
+        </figcaption>
+    </figure>
+
+    <div class="card mb-2 shadow-sm p-3 bg-white rounded">
+        <div class="card-img-top"></div>
+        <div class="card-header">
+            <div class="d-flex align-items-center my-2">
+                <h5>Most viewed</h5>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="images-container">
+                <!-- <div><app-user-profile></app-user-profile></div> -->
+              <div *ngFor="let item of images" class="img-container m-1">
+                <div class="card mb-2 shadow-sm p-3 bg-white rounded">
+                  <div class="card-img-top">
+                  </div>
+                  <div class="card-header">
+                    <div class="d-flex align-items-center my-2" *ngIf="item">
+                      <!-- <img  [src]="faUserCircle" class="mr-3 ml-2 my-auto"> -->
+                      <!-- <img *ngIf="item.photoURL" [src]="item.photoURL" alt="profile picture"
+                    class="rounded-circle image-size mr-3 ml-2 my-auto"> -->
+                      <div><app-user-profile></app-user-profile></div>
+                    </div>
+                  </div>
+          
+                  <div class="card-body">
+          
+                    <div class="d-flex">
+                      <p class="text-justify">
+                        <span class="text-secondary">{{item.date}}</span>
+                        {{item.description}}
+                      </p>
+          
+                    </div>
+                  </div>
+                  <div class="card-footer text-muted">
+                    {{item.daysAgo}}
+                    <div class="float-right">
+                      <h4>{{item.price}}</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="card-footer">
+            <div class="d-flex align-items-center my-2">
+                
+            </div>
+        </div>
+    </div>
+</main>

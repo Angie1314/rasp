@@ -1,19 +1,96 @@
-::selection{background-color:none; color:inherit;}
 
-.middle-section{
-  width:800px; height: 320px;
-  margin: 0px auto;
-  border-radius: 9px;
-  padding: 30px;
-  color: rgb(92, 89, 89);
+
+.my-custom-scrollbar {
+  position: relative;
+  height: 200px;
+  overflow: auto;
 }
 
-.left-section {
-  width:800px; height: 320px;
-  margin: 0px auto;
-  border-radius: 9px;
-  padding: 30px;
-  color: rgb(92, 89, 89);
+.table-wrapper-scroll-y {
+  display: block;
 }
-.section-a{width:650px; height:260px; float:left;}
-.section-b{width:150px; height:260px; float:left;}
+
+#post-dropdown::after {
+  display:none;
+}
+
+.images-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  position: relative;
+}
+
+.image-container {
+  position: relative;
+}
+
+.item-img {
+  object-fit: cover;
+}
+
+.fade-image {
+  opacity: 0.5
+}
+
+.image-container .download-link {
+  display: none;
+  top: -100%;
+  opacity: 0;
+  text-align: center;
+  color: inherit;
+}
+
+.display-icon {
+  display: block !important;
+  opacity: 1 !important; /* added */
+  top: 0 !important; /* added */
+  z-index: 500;
+}
+
+.position-icon {
+  top: 50%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+button:focus {
+  outline: none;
+}
+
+main {
+  padding: 80px 0px;
+}
+
+.iconColor {
+  color: #d3d3d3;
+  opacity: 0.5;
+}
+
+h4 {
+  color: green;
+}
+
+.card-img-top {
+  height: 15rem;
+  object-fit: cover;
+}
+
+@media screen and (max-width:500px) {
+  .images-container {
+    grid-template-columns: auto;
+  }
+}
+
+@media screen and (max-width:400px) {
+  .images-container {
+    grid-template-columns: auto;
+  }
+}
+
+@media screen and (max-width:300px) {
+  .images-container {
+    grid-template-columns: auto;
+  }
+}

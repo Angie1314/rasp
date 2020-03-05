@@ -1,4 +1,9 @@
-<app-nav-bar></app-nav-bar>
-<div class="mx-auto margin-top">
-<p>user-profile works!</p>
+<div class="d-flex mr-2" *ngIf="user">
+    <div *ngIf="!user.photoURL" class="mr-3 ml-2 my-auto"><img [src]="faUserCircle"/></div>
+    <img *ngIf="user.photoURL" [src]="user.photoURL" alt="profile picture"
+        class="rounded-circle image-size mr-3 ml-2 my-auto">
+    <div>
+        <div id="name" class="font-weight-bold">{{user.displayName}}</div>
+        <div id="email">{{user.email}}</div>
+    </div>
 </div>
