@@ -12,10 +12,9 @@
         <a class="nav-link" routerLink="/home">Info<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/user">Info</a>
       </li>
     </ul>
-    
+
     <a class="nav-link" routerLink="/home"><i class="fa fa-home iconColor fa-lg"></i></a>
     <div class="pl-5">
 
@@ -30,9 +29,17 @@
       <i class="fa fa-comments iconColor fa-lg"></i>
     </div>
 
+    <div class="pl-5">
+      <a routerLink="/addpost" class="px-2 nav-link-style">
+        <i class="fa iconColor fa-plus-square fa-lg"></i>
+      </a>
+    </div>
+
     <div class="pl-5 pr-5">
-      <a class="nav-link" routerLink="/user"><app-user-profile></app-user-profile></a>
-  </div>
+      <a class="nav-link" routerLink="/user">
+        <app-user-profile></app-user-profile>
+      </a>
+    </div>
 
   </div>
   <div class="bottom-bar fixed-bottom p-2 d-sm-none d-grid shadow ">
@@ -44,14 +51,14 @@
     </div>
 
     <div>
-      <a routerLink="/" class="nav-link-style" [class.active-nav-link-bottom]="isAtProfilePage">
+      <a routerLink="/user" class="nav-link-style" [class.active-nav-link-bottom]="isAtProfilePage">
         <i class="far fa-user-circle iconColor fa-lg"></i>
       </a>
     </div>
 
     <div>
-      <a routerLink="/" class="nav-link-style" [class.active-nav-link-bottom]="isAtProfilePage">
-        <i class="fas fa-search iconColor fa-lg"></i>
+      <a routerLink="/addpost" class="nav-link-style" [class.active-nav-link-bottom]="isAtProfilePage">
+        <i class="fas  fa-plus-square iconColor fa-lg"></i>
       </a>
     </div>
   </div>

@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "rasp-2d2a0"
+    "default": "linked-agri",
+    "linked-agri": "linked-agri",
+    "firebase use --add": "content-sharing-app"
   }
 }

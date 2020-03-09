@@ -3,18 +3,18 @@
 </nav>
 <main class="container">
   <div class="images-container">
-      <!-- <div><app-user-profile></app-user-profile></div> -->
-    <div *ngFor="let item of images" class="img-container m-1">
+    <!-- <div><app-user-profile></app-user-profile></div> -->
+    <div *ngFor="let item of result" class="img-container m-1">
       <div class="card mb-2 shadow-sm p-3 bg-white rounded">
         <div class="card-img-top">
-          <img class="card-img-top item-img w-100 h-100" [src]="item.src" alt="Picture">
+          <!-- <img class="card-img-top item-img w-100 h-100" [src]="item.src" alt="Picture"> -->
+          <img class="item-img w-100 h-100 p-1" [src]="item.imageUrl" alt="Picture">
         </div>
         <div class="card-header">
           <div class="d-flex align-items-center my-2" *ngIf="item">
-            <!-- <img  [src]="faUserCircle" class="mr-3 ml-2 my-auto"> -->
-            <!-- <img *ngIf="item.photoURL" [src]="item.photoURL" alt="profile picture"
-          class="rounded-circle image-size mr-3 ml-2 my-auto"> -->
-            <div><app-user-profile></app-user-profile></div>
+            <div>
+              <app-user-profile></app-user-profile>
+            </div>
           </div>
         </div>
 
@@ -22,17 +22,19 @@
 
           <div class="d-flex">
             <p class="text-justify">
-              <span class="text-secondary">{{item.date}}</span>
+              <span class="text-secondary">{{ item.timeDateCreated| date:'mediumDate' }}</span>
               {{item.description}}
             </p>
 
           </div>
         </div>
         <div class="card-footer text-muted">
-          {{item.daysAgo}}
-          <div class="float-right">
-            <h4>{{item.price}}</h4>
-          </div>
+          <span>{{item.timeDateCreated | timeAgo}}</span>
+          <ng-container *ngIf="item.price">
+            <div class="float-right">
+              <h4>R {{item.price}}</h4>
+            </div>
+          </ng-container>
         </div>
       </div>
     </div>

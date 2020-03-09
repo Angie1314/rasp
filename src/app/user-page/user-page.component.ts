@@ -1,41 +1,82 @@
-import { Component, OnInit } from '@angular/core';
-import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
-import { User } from 'src/app/models/user';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { AngularFireDatabase } from '@angular/fire/database';
 import { AngularFireAuth } from '@angular/fire/auth';
+
+import { Subscription } from 'rxjs';
+import { faCheck, faEllipsisV } from '@fortawesome/free-solid-svg-icons';
+
+import { Image } from 'src/app/models/image';
+import { User } from 'src/app/models/user';
+import { EventsService } from 'src/app/services/events.service';
 
 @Component({
   selector: 'app-user-page',
   templateUrl: './user-page.component.html',
   styleUrls: ['./user-page.component.scss']
 })
-export class UserPageComponent implements OnInit {
+export class UserPageComponent implements OnInit, OnDestroy {
 
-  faUserCircle = faUserCircle;
+  faCheck = faCheck;
+  faEllipsisV = faEllipsisV;
+
+  removing = false;
   user: User;
+  images: Image[];
+  deleteMode = false;
+  isDeleting: boolean;
 
-  images = [
-    {
-      // tslint:disable-next-line: max-line-length
-      src: 'assets/images/brah1.jpg', name: 'Cathrin Roets', description: 'The Brahman for sale.',
-      date: '11/12/13', photoURL: 'assets/images/cow1.png', daysAgo: '13 days ago', price: 'R12,000.', area: 'Bela Bela'
-    },
-    {
-      // tslint:disable-next-line: max-line-length
-      src: 'assets/images/land1.jpeg', name: 'Cathrin Roets', description: 'Agricultural land to rent.',
-      date: '09/11/19', photoURL: 'assets/images/cow1.png', daysAgo: '1 Month ago', price: 'R80,000', area: 'Marble Hall'
-    },
-    {
-      // tslint:disable-next-line: max-line-length
-      src: 'assets/images/trac1.jpg', name: 'Cathrin Roets', description: 'Tractor for sale.',
-      date: '09/11/19', photoURL: 'assets/images/cow1.png', daysAgo: '14 days ago', price: 'R45,000', area: 'East Rand'
-    },
-  ];
+  isDeletingSubscription: Subscription;
 
-  constructor(private firebaseAuth: AngularFireAuth) { }
+  constructor(public db: AngularFireDatabase,
+              private eventService: EventsService,
+              private firebaseAuth: AngularFireAuth) { }
 
   ngOnInit() {
     this.firebaseAuth.user.subscribe(
       user => this.user = user
     );
+    this.firebaseAuth.auth.onAuthStateChanged(user => {
+      this.db.list<Image>('/users/' + user.uid + '/files')
+        .valueChanges()
+        .subscribe(values => {
+          this.images = values;
+        });
+    });
+
+    this.eventService.currentDeleteMode.subscribe(currentDeleteMode => {
+      this.deleteMode = currentDeleteMode;
+    });
+
+    this.isDeletingSubscription = this.eventService.currentIsDeleting.subscribe(x => {
+      this.isDeleting = x;
+    });
+  }
+
+  ngOnDestroy() {
+    this.isDeletingSubscription.unsubscribe();
+  }
+
+  selectFile(imageName: any) {
+    if (this.checkSelectedImage(imageName)) {
+      this.deSelectFile(imageName);
+    } else {
+      this.eventService.setSelectedImages(imageName);
+    }
+  }
+
+  deSelectFile(imageName: string) {
+    this.eventService.removeSelectedImage(imageName);
+  }
+
+  checkSelectedImage(imageName: string) {
+    return this.eventService.getSelectedImages().includes(imageName);
+  }
+
+  toggleDelete() {
+    this.eventService.setDeleteMode(true);
+  }
+
+  logOut() {
+    this.firebaseAuth.auth.signOut();
   }
 }

@@ -19,6 +19,13 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { environment } from 'src/environments/environment';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { UserPageComponent } from './user-page/user-page.component';
+import { AddPostComponent } from './add-post/add-post.component';
+
+import { HttpClientModule } from '@angular/common/http';
+
+import { FormsModule } from '@angular/forms';
+
+import { TimeAgoPipe } from 'time-ago-pipe';
 
 @NgModule({
   declarations: [
@@ -27,7 +34,9 @@ import { UserPageComponent } from './user-page/user-page.component';
     NavBarComponent,
     HomePageComponent,
     UserProfileComponent,
-    UserPageComponent
+    UserPageComponent,
+    AddPostComponent,
+    TimeAgoPipe
   ],
   imports: [
     BrowserModule,
@@ -38,7 +47,9 @@ import { UserPageComponent } from './user-page/user-page.component';
     AngularFireAuthModule,
     AngularFireStorageModule,
     AngularFireDatabaseModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

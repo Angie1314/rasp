@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-home-page',
@@ -47,14 +48,19 @@ export class HomePageComponent implements OnInit {
 
   ];
 
-  constructor() {
+  result: object;
+  getHomeFeedCloudFunctionSubscription;
 
-
-  }
-
-
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
+    this.getHomeFeedCloudFunctionSubscription = this.http.get(`https://us-central1-linked-agri.cloudfunctions.net/homeFeedData`)
+      .subscribe((results) => {
+        this.result = JSON.parse(results.toString());
+      });
   }
 
+  ngDestory() {
+    this.getHomeFeedCloudFunctionSubscription.unsubscribe();
+  }
 }

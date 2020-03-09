@@ -4,6 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { UserPageComponent } from './user-page/user-page.component';
+import { AddPostComponent } from './add-post/add-post.component';
 
 const routes: Routes = [
   {
@@ -21,7 +22,11 @@ const routes: Routes = [
   {
     path: 'user',
     component: UserPageComponent
-  }
+  },
+  {
+    path: 'addpost',
+    component: AddPostComponent
+  },
 ];
 
 @NgModule({

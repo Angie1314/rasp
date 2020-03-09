@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
+import { faUserCircle, faPlusSquare } from '@fortawesome/free-solid-svg-icons';
 import { Subscription } from 'rxjs';
 import { Router, NavigationEnd, RouterEvent } from '@angular/router';
 
@@ -14,18 +14,19 @@ export class NavBarComponent implements OnInit {
   faUserCircle = faUserCircle;
   isAtHomePage = false;
   isAtProfilePage = false;
+  faPlusSquare = faPlusSquare;
 
   routerEventsSubscription: Subscription;
 
   constructor(private router: Router) {
   this.logo = '../../../../assets/images/logo.png';
-  this.routerEventsSubscription = router.events.subscribe((event: RouterEvent) => {
-      if (event instanceof NavigationEnd) {
-        this.isAtHomePage = router.url === '/home';
-        this.isAtProfilePage = router.url === '/';
-        // TODO possibly also set website tile here
-      }
-    });
+  // this.routerEventsSubscription = router.events.subscribe((event: RouterEvent) => {
+  //     if (event instanceof NavigationEnd) {
+  //       this.isAtHomePage = router.url === '/home';
+  //       this.isAtProfilePage = router.url === '/';
+  //       // TODO possibly also set website tile here
+  //     }
+  //   });
   }
 
   ngOnInit() {
